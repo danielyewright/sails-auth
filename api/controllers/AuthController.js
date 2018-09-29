@@ -28,10 +28,10 @@ module.exports = {
         })
 			}
 
-			req.logIn(user, function(err) {
+			req.login(user, function(err) {
         if (err) {
 					res.send(err);
-				}
+        }
 
 				return res.send({
           message: info.message,
@@ -45,22 +45,6 @@ module.exports = {
     req.logout();
     // res.redirect('/');
   },
-
-  // register: async function(req, res) {
-  //   await User.create(req.body).exec(function (err, user) {
-  //     if (err) {
-  //       // return res.json(err.status, {err: err});
-  //       console.log(err)
-  //       return res.status(401).json({err: err});
-  //     }
-  //     // If user created successfuly we return user and token as response
-  //     if (user) {
-  //       // NOTE: payload is { id: user.id}
-  //       // res.json(200, {user: user, token: jwToken.issue({id: user.id})});
-  //       res.status(200).json({user: user, token: jwToken.issue({id: user.id})});
-  //     }
-  //   });
-  // }
 
 };
 
