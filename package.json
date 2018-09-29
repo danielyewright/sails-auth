@@ -1,0 +1,39 @@
+{
+  "name": "sails-auth",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/lodash": "^3.10.3",
+    "async": "2.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^6.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sails": "^1.0.2",
+    "sails-hook-orm": "^2.0.0-16",
+    "sails-hook-sockets": "^1.4.0",
+    "sails-mysql": "^1.0.0"
+  },
+  "devDependencies": {
+    "@sailshq/eslint": "^4.19.3"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/sails-auth.git"
+  },
+  "author": "anonymous node/sails user",
+  "license": "",
+  "engines": {
+    "node": ">=10.11"
+  }
+}
