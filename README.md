@@ -1,6 +1,6 @@
 # sails-auth
 
-a [Sails v1](https://sailsjs.com) application using JWT/Passport for authentication, and Winston for logging to files.
+a [Sails v1](https://sailsjs.com) application using JWT & Passport for authentication, and [Winston](https://github.com/winstonjs/winston) for logging to files.
 
 
 ### Getting Started
