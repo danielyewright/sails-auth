@@ -5,7 +5,7 @@ a [Sails v1](https://sailsjs.com) application using JWT/Passport for authenticat
 
 ### Getting Started
 
-`npm install` or `yarn install`
+`npm install` or `yarn`
 
 
 **API Endpoints**
