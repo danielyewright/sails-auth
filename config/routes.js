@@ -38,7 +38,6 @@ module.exports.routes = {
   //  ║║║║╚═╗║
   //  ╩ ╩╩╚═╝╚═╝
 
-  'POST /login': 'AuthController.login',
-  // 'POST /register': 'UserController.create'
+  'POST /auth/user': 'AuthController.login',
 
 };

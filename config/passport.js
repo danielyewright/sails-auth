@@ -1,6 +1,6 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var bcrypt = require('bcrypt-nodejs');
+var bcrypt = require('bcryptjs');
 
 passport.serializeUser(function(user, cb) {
   cb(null, user.id);
@@ -25,7 +25,7 @@ passport.use(new LocalStrategy({
 
         bcrypt.compare(password, user.password, function(err, res) {
           if (!res) {
-            return cb(null, false, {message: err.message});
+            return cb(null, false, {message: err});
           }
 
           return cb(null, user, {message: 'Login Successful'});

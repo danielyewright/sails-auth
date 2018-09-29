@@ -19,7 +19,6 @@ module.exports = async function (req, res, next) {
       }
     }
     else {
-      // return res.json(401, {err: 'Format is Authorization: Bearer [token]'});
       return res.status(401).json({err: 'Format is Authorization: Bearer [token]'});
     }
   }
@@ -29,13 +28,11 @@ module.exports = async function (req, res, next) {
     delete req.query.token;
   }
   else {
-    // return res.json(401, {err: 'No Authorization header was found'});
     return res.status(401).json({err: 'No Authorization header was found'});
   }
 
   await jwToken.verify(token, function (err, token) {
     if (err) {
-      // return res.json(401, {err: 'Invalid Token!'});
       return res.status(401).json({err: 'Invalid token!'});
     }
 

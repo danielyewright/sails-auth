@@ -1,13 +1,12 @@
 {
   "name": "sails-auth",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.1.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
     "@sailshq/lodash": "^3.10.3",
     "async": "2.0.1",
-    "bcrypt-nodejs": "^0.0.3",
     "bcryptjs": "^2.4.3",
     "dotenv": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
@@ -16,7 +15,6 @@
     "sails": "^1.0.2",
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
-    "sails-mysql": "^1.0.0",
     "winston": "^3.1.0"
   },
   "devDependencies": {
@@ -31,10 +29,10 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/sails-auth.git"
+    "url": "git@github.com:danielyewright/sails-auth.git"
   },
-  "author": "anonymous node/sails user",
-  "license": "",
+  "author": "Daniely Wright",
+  "license": "MIT",
   "engines": {
     "node": ">=10.11"
   }

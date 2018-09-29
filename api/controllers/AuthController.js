@@ -17,12 +17,7 @@ module.exports = {
         });
       }
 			else {
-				// return res.json(200, {
-				// 	user: user,
-				// 	token: jwToken.issue({id: user.id})
-        // })
-
-        return res.status(200).json({
+				return res.status(200).json({
           user: user,
           token: jwToken.issue({id: user.id})
         })
@@ -39,12 +34,7 @@ module.exports = {
         });
       });
     })(req, res);
-  },
-
-	logout: function(req, res) {
-    req.logout();
-    // res.redirect('/');
-  },
+  }
 
 };
 

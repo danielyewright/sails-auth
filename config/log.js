@@ -12,11 +12,25 @@
 
 var winston = require('winston');
 
-var logger = winston.createLogger({
+var { createLogger, format, transport } = require('winston');
+var { combine, timestamp, label, printf, prettyPrint } = format;
+
+var logFormat = printf(function(info) {
+  return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
+});
+
+var customLogger = winston.createLogger({
+  format: combine(
+    label({label: ''}),
+    timestamp(),
+    prettyPrint(),
+    logFormat
+  ),
   transports: [
     new winston.transports.Console(),
     new winston.transports.File({
-      filename: 'errorLog.log',
+      filename: './logs/sails-log.log',
+      handleExceptions: true,
       level: 'error',
       json: false,
       colorize: false
@@ -38,9 +52,7 @@ module.exports.log = {
   *                                                                          *
   ***************************************************************************/
 
-  // level: 'info'
-  level: 'info',
-  colorize: false,
-  custom: logger
+  level: 'info', // default level: 'info'
+  custom: customLogger
 
 };

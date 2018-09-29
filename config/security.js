@@ -41,7 +41,6 @@ module.exports.security = {
   },
 
   methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
-
   headers: 'origin, content-type, accept, authorization'
 
 
