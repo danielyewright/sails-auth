@@ -20,8 +20,7 @@
  *   https://sailsjs.com/anatomy/app.js
  */
 
-var dotenv = require('dotenv');
-dotenv.config({path: './.env'});
+var dotenv = require('dotenv').config();
 
 // Ensure we're in the project directory, so cwd-relative paths work as expected
 // no matter where we actually lift from.
