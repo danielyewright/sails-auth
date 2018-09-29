@@ -29,7 +29,7 @@ var customLogger = winston.createLogger({
   transports: [
     new winston.transports.Console(),
     new winston.transports.File({
-      filename: './logs/sails-log.log',
+      filename: './sails-log.log',
       handleExceptions: true,
       level: 'error',
       json: false,
