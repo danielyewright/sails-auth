@@ -13,7 +13,7 @@ The app uses `sails-disk` for data storage (for quickly getting started), but yo
 
 ### Environment Variables
 
-`dotenv` is utilized for environment variables. If you'd like to use them within the app, create a `.env` file in the root of the app directory and set variables in that file:
+[dotenv](https://github.com/motdotla/dotenv) is utilized for environment variables. If you'd like to use them within the app, create a `.env` file in the root of the app directory and set variables in that file:
 
 ```
 MYSQL_URL=mysql://user:password@hostname:port/database
