@@ -38,8 +38,8 @@ module.exports.security = {
     allRoutes: true,
     allowOrigins: '*',
     allowCredentials: false,
-    methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
-    headers: 'origin, content-type, accept, authorization'
+    allowRequestMethods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
+    allowRequestHeaders: 'origin, content-type, accept, authorization'
   },
 
 
