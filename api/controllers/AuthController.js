@@ -16,19 +16,24 @@ module.exports = {
           user
         });
       }
-			else {
-				return res.status(200).json({
+      else {
+        return res.status(200).json({
           user: user,
-          token: jwToken.issue({id: user.id})
+          token: jwToken.issue({
+            id: user.id,
+            email: user.email,
+            firstName: user.firstName,
+            lastName: user.lastName
+          })
         })
-			}
+      }
 
-			req.login(user, function(err) {
+      req.login(user, function(err) {
         if (err) {
-					res.send(err);
+          res.send(err);
         }
 
-				return res.send({
+        return res.send({
           message: info.message,
           user
         });
